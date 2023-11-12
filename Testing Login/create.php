@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<link rel="stylesheet" href = "style.css">
+		<link rel="stylesheet" href = "Include/style.css">
 	</head>
 
 <body>
@@ -12,14 +12,14 @@
 
 	<div id="id01" class="modal">
 
-		<form class="modal-content animate" action="formhandler.inc.php" method="post">
+		<form class="modal-content animate" action="Include/formhandler.inc.php" method="post">
 			<div class="imgcontainer">
 				<span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
 				<img src="OIG.svg" alt="Avatar" class="avatar">
 			</div>
 
 			<div class="container">
-                <form action= "formhandler.inc.php" method="post">
+                <form action= "Include/formhandler.inc.php" method="post">
 				    <label><b>Username</b></label>
 				    <input type="text" placeholder="Enter Username" name="uname" required>
 
