@@ -1,3 +1,7 @@
+<?php
+    require_once "Include/signup_view.php";
+?>
+
 <!DOCTYPE html>
 <html>
 	<head>
@@ -22,9 +26,11 @@
                 <form action= "Include/formhandler.inc.php" method="post">
 				    <label><b>Username</b></label>
 				    <input type="text" placeholder="Enter Username" name="uname" required>
-
+                    <label><b>Email</b></label>
+				    <input type="text" placeholder="Enter Email" name="email" required>
 				    <label><b>Password</b></label>
 				    <input type="password" placeholder="Enter Password" name="psw" required>
+                    
 
 				    <button type="submit">Sign Up</button>
                 </form>
@@ -35,6 +41,9 @@
 				
 			</div>
 		</form>
+        <?php
+        check_signup_errors();
+        ?>
 	</div>
 
 	<script>
