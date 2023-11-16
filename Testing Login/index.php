@@ -1,7 +1,5 @@
 <?php
-session_start();
-
-$_SESSION["username"] = "testName";
+require_once "Include/config.php";
 ?>
 
 

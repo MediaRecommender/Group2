@@ -3,11 +3,11 @@
 declare(strict_types=1);
 
 function isInputEmpty(string $uname, string $psw, string $email){
-    return empty($uname) || empty($psw) || empty($email);
+    return empty($psw) || empty($email) ||empty($uname);
 }
 
 function isEmailInvalid(string $email){
-    return filter_var($email, FILTER_VALIDATE_EMAIL) !== true;
+    return filter_var($email, FILTER_VALIDATE_EMAIL) === false;
 }
 
 function isUsernameTaken(object $pdo, string $uname) {

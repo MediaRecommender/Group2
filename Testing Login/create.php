@@ -1,5 +1,6 @@
 <?php
     require_once "Include/signup_view.php";
+	require_once "Include/config.php";
 ?>
 
 <!DOCTYPE html>
@@ -25,27 +26,26 @@
 			<div class="container">
                 <form action= "Include/formhandler.inc.php" method="post">
 				    <label><b>Username</b></label>
-				    <input type="text" placeholder="Enter Username" name="uname" required>
+				    <input type="text" placeholder="Enter Username" name="uname" >
                     <label><b>Email</b></label>
-				    <input type="text" placeholder="Enter Email" name="email" required>
+				    <input type="text" placeholder="Enter Email" name="email" >
 				    <label><b>Password</b></label>
-				    <input type="password" placeholder="Enter Password" name="psw" required>
-                    
-
+				    <input type="password" placeholder="Enter Password" name="psw" >
 				    <button type="submit">Sign Up</button>
+					
                 </form>
+
 			</div>
 
 			<div class="container" style="background-color:#f1f1f1">
-				<button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-				
+				<button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>			
 			</div>
 		</form>
-        <?php
-        check_signup_errors();
-        ?>
-	</div>
 
+	</div>
+	<?php
+        			check_signup_errors();
+        		?>
 	<script>
 		var modal = document.getElementById('id01');
 		window.onclick = function(event) {
