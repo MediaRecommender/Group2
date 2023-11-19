@@ -9,11 +9,14 @@
             </form>
         <?php
     }
+    else
+        header("Location: index.php");
 
 ?>
 
 <!DOCTYPE html>
 <html><head>
+<link rel="stylesheet" href = "Include/style.css">
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 <title>A Sample HTML Document (Test File)</title>
 <meta charset="utf-8">
