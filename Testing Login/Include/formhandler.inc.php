@@ -1,14 +1,14 @@
 <?php
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $uname = $_POST["uname"];
     $email = $_POST["email"];
     $psw = $_POST["psw"];
 
     try{
         require_once "db_conn.php";
-        require_once "signup_model.php";
-        require_once "signup_contr.php";
+        require_once "signupCMV/signup_model.php";
+        require_once "signupCMV/signup_contr.php";
 
         // ERROR HANDLERS
         $errors = [];
@@ -29,7 +29,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if(isEmailRegistered($pdo, $email)) {
             $errors["emailRegistered"] = "Email already registered!";
         }
-        
+
         require_once 'config.php';
 
         if($errors){
@@ -65,10 +65,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         die();
 
     } catch (PDOException $e) {
-        die("Query failed here: " . $e->getMessage());
+        die("Query failed: " . $e->getMessage());
     }
 
 
 } else{
-    header("Location: ../index.php");
+    header("Location: ../create.php");
 }

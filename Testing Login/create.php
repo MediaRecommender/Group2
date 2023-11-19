@@ -1,6 +1,7 @@
 <?php
     require_once "Include/signup_view.php";
 	require_once "Include/config.php";
+	
 ?>
 
 <!DOCTYPE html>
@@ -17,7 +18,7 @@
 
 	<div id="id01" class="modal">
 
-		<form class="modal-content animate" action="Include/formhandler.inc.php" method="post">
+		<form class="modal-content animate" action="Include/formhandler.inc.php" method="POST">
 			<div class="imgcontainer">
 				<span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
 				<img src="OIG.svg" alt="Avatar" class="avatar">
@@ -44,8 +45,8 @@
 
 	</div>
 	<?php
-        			check_signup_errors();
-        		?>
+        check_signup_errors();
+    ?>
 	<script>
 		var modal = document.getElementById('id01');
 		window.onclick = function(event) {
