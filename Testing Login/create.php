@@ -1,5 +1,5 @@
 <?php
-    require_once "Include/signup_view.php";
+    require_once "Include/signupCMV/signup_view.php";
 	require_once "Include/config.php";
 	
 ?>
@@ -21,7 +21,7 @@
 		<form class="modal-content animate" action="Include/formhandler.inc.php" method="POST">
 			<div class="imgcontainer">
 				<span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-				<img src="OIG.svg" alt="Avatar" class="avatar">
+				<img src="Include/OIG.svg" alt="Avatar" width="100" height="100" class="avatar">
 			</div>
 
 			<div class="container">
@@ -46,7 +46,10 @@
 	</div>
 	<?php
         check_signup_errors();
+		
     ?>
+
+	
 	<script>
 		var modal = document.getElementById('id01');
 		window.onclick = function(event) {

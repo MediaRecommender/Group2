@@ -1,5 +1,15 @@
 <?php
-require_once "Include/config.php";
+    require_once "Include/config.php";
+    require_once "Include/loginCMV/login_view.php";
+    if($_SESSION["user_uname"]){
+        output_uname();
+        ?>
+            <form action='Include/logout.inc.php' method='POST'>
+            <button class='cancelbtn'>Logout</button>
+            </form>
+        <?php
+    }
+
 ?>
 
 <!DOCTYPE html>
