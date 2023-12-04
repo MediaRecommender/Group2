@@ -3,7 +3,7 @@
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $uname = $_POST["uname"];
     $psw = $_POST["psw"];
-    $rmb = $_POST["rmb"];
+    //$rmb = $_POST["rmb"];
     try{
         require_once "db_conn.php";
         require_once "loginCMV/login_model.php";
