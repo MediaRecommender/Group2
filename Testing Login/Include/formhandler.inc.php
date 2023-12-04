@@ -34,7 +34,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
         if($errors){
             $_SESSION["errorsSignup"] = $errors;
-            header("Location: ..\create.php");
+            header("Location: ..\index.php");
             die();
         }
 
