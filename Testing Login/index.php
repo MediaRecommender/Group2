@@ -22,7 +22,7 @@
 	<h2>Modal Login Form</h2>
 	<!--Step 1 : Adding HTML-->
 	<?php
-	if($_SESSION["user_uname"])
+	if($header == "index.php?login=success")
 		header("Location: login.php");
 	?>
 	<button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
@@ -43,7 +43,7 @@
 				    <input type="password" placeholder="Enter Password" name="psw" required>
 
 				    <button type="submit">Login</button>
-				    <input type="checkbox" checked="checked"> Remember me
+				    <input type="checkbox" checked="checked" name="rmb"> Remember me
 			</div>
 
 			<div class="container" style="background-color:#f1f1f1">

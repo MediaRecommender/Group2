@@ -38,7 +38,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             die();
         }
 
-        $query = "INSERT INTO users (uname, psw, email) 
+        $query = "INSERT INTO users (name, password, username) 
         
         VALUES (:uname, :psw, :email);";
 

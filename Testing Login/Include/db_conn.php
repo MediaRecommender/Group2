@@ -1,10 +1,10 @@
 <?php
 /* Database credentials. Assuming you are running MySQL
 server with default setting (user 'root' with no password) */
-$dsn = "mysql:host=test-user-database.cebuue64dnw6.us-east-2.rds.amazonaws.com:3306;
-        dbname=TestUserDB";
+$dsn = "mysql:host=musicrecommender-db.cwyhyfiwavvc.us-west-1.rds.amazonaws.com:3306;
+        dbname=musicrecommender";
 $dbusername = "admin";
-$dbpassword = "helloWorld1234";
+$dbpassword = "password";
 
 try {
     $pdo = new PDO($dsn, $dbusername, $dbpassword);

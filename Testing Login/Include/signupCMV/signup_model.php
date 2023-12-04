@@ -5,7 +5,7 @@ declare(strict_types=1);
 
 
 function get_username(object $pdo, string $uname) {
-    $query = "SELECT uname FROM users WHERE uname = :username";
+    $query = "SELECT name FROM users WHERE name = :username";
     $stmt = $pdo->prepare($query);
     $stmt->bindParam(":username", $uname);
     $stmt->execute();
@@ -15,7 +15,7 @@ function get_username(object $pdo, string $uname) {
 }
 
 function get_email(object $pdo, string $email) {
-    $query = "SELECT email FROM users WHERE email = :email";
+    $query = "SELECT username FROM users WHERE username = :email";
     $stmt = $pdo->prepare($query);
     $stmt->bindParam(":email", $email);
     $stmt->execute();

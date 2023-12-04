@@ -3,6 +3,7 @@
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $uname = $_POST["uname"];
     $psw = $_POST["psw"];
+    $rmb = $_POST["rmb"];
     try{
         require_once "db_conn.php";
         require_once "loginCMV/login_model.php";
@@ -18,7 +19,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
         $result = get_uname_info($pdo, $uname);
 
-        if(isUsernameWrong($result) || isPasswordWrong($psw, $result["psw"])) {
+        if(isUsernameWrong($result) || isPasswordWrong($psw, $result["password"])) {
             $errors["invalidInfo"] = "Username or password incorrect!";
         }
 
@@ -31,14 +32,14 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         }
 
         $newSessionID = session_create_id();
-        $sessionID = $newSessionID . "_" . $result["id"];
+        $sessionID = $newSessionID . "_" . $result["name"];
         session_id($sessionID);
 
-        $_SESSION["user_id"] = $result["id"];
-        $_SESSION["user_uname"] = htmlspecialchars($result["uname"]);
+        $_SESSION["user_id"] = $result["username"];
+        $_SESSION["user_uname"] = htmlspecialchars($result["name"]);
 
         $_SESSION['last_regeneration'] = time(); 
-
+        
         header("Location: ../index.php?login=success");
 
         $pdo = null;
