@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-function isInputEmpty(string $uname, string $psw){
+function isLoginInputEmpty(string $uname, string $psw){
     return empty($psw) ||empty($uname);
 }
 

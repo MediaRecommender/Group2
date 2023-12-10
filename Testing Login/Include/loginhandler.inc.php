@@ -3,9 +3,16 @@
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $uname = $_POST["uname"];
     $psw = $_POST["psw"];
+    loginMethod($uname,$psw);
+}
+else {
+    header("Location: ../index.php");
+}
+
+function loginMethod($uname,$psw){
     //$rmb = $_POST["rmb"];
     try{
-        require_once "db_conn.php";
+        require "db_conn.php";
         require_once "loginCMV/login_model.php";
         require_once "loginCMV/login_contr.php";
 
@@ -13,7 +20,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $errors = [];
 
 
-        if(isInputEmpty($uname, $psw)) {
+        if(isLoginInputEmpty($uname, $psw)) {
             $errors["emptyInput"] = "Fill in all fields!";
         }
 
@@ -50,7 +57,4 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     } catch(PDOException $e) {
         die("Query failed: " . $e->getMessage());
     }
-}
-else {
-    header("Location: ../index.php");
 }

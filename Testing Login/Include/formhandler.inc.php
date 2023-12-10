@@ -6,7 +6,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $psw = $_POST["psw"];
 
     try{
-        require_once "db_conn.php";
+        require "db_conn.php";
         require_once "signupCMV/signup_model.php";
         require_once "signupCMV/signup_contr.php";
 
@@ -56,13 +56,21 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $stmt->bindParam(":email", $email);
 
         $stmt->execute();
-
         $pdo = null;
         $stmt = null;
+        
 
-        header("Location:..\index.php");
-
-        die();
+        $loginHandler = 'loginhandler.inc.php';
+        if(file_exists($loginHandler)){
+            require_once $loginHandler;
+            loginMethod($uname,$psw);
+            header("Location: ../index.php?login=success");
+            die();
+        }
+        else {
+            header("Location:..\index.php");
+            die();
+        }
 
     } catch (PDOException $e) {
         die("Query failed: " . $e->getMessage());
