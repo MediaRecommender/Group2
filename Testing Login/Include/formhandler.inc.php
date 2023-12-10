@@ -7,6 +7,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     try{
         require "db_conn.php";
+
         require_once "signupCMV/signup_model.php";
         require_once "signupCMV/signup_contr.php";
 
@@ -56,6 +57,15 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $stmt->bindParam(":email", $email);
 
         $stmt->execute();
+
+
+        $query = "INSERT INTO users (name, password, username) 
+        
+        VALUES (:uname, :psw, :email);";
+
+        $stmt = $pdo->prepare($query);
+
+
         $pdo = null;
         $stmt = null;
         

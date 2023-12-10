@@ -10,6 +10,7 @@
 <html>
 <head>
 	<link rel="stylesheet" href="Include/style.css">
+	<link rel="icon" type="image/x-icon" href="Media/OIG.svg">
 
 </head>
 
