@@ -1,0 +1,80 @@
+body {
+	background-image: none;
+}
+
+
+
+/* Optional styling for checkbox alignment */
+.checkbox-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; /* Adjust the gap between checkbox pairs */
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    width: calc(50% - 5px); /* Set width for checkbox pairs */
+}
+
+.label-text {
+    margin-right: 10px; /* Adjust the space between label text and checkbox */
+    flex: 1; /* Allows label text to take up remaining space */
+}
+
+.toggle-switch {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 40px; /* Width of the toggle switch */
+    height: 20px; /* Height of the toggle switch */
+    background-color: var(--primary-red); /* Background color of the toggle switch */
+    border-radius: 10px; /* Border radius for rounded edges */
+    position: relative;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.toggle-switch:checked {
+    background-color: var(--secondary-blue); /* Background color when checked */
+}
+
+.toggle-switch::before {
+    content: '';
+    position: absolute;
+    width: 16px; /* Width of the toggle knob */
+    height: 16px; /* Height of the toggle knob */
+    background-color: var(--background-white); /* Color of the toggle knob */
+    border-radius: 50%; /* Make it round */
+    top: 50%;
+    transform: translateY(-50%);
+    left: 4px; /* Position of the toggle knob */
+    transition: left 0.3s;
+}
+
+.toggle-switch:checked::before {
+    left: calc(100% - 20px); /* Position of the toggle knob when checked */
+}
+
+.toggle-switch {
+    margin-right: 8px; /* Added margin between checkboxes */
+    margin-bottom: 10px; /* Added margin underneath checkboxes */
+    border: 1px solid #000; /* Added border around checkboxes */
+    padding: 5px; /* Optional: Adding padding inside the border */
+  }
+
+  /* Additional styling for spacing between checkbox label text */
+/* Additional styling for spacing between checkbox labels and border */
+.checkbox-label {
+    display: flex; /* Use flexbox to manage the layout */
+    align-items: center; /* Vertically center items */
+  }
+  
+  .label-text {
+    margin-right: 8px; /* Added margin between label text */
+    width: 150px; /* Added fixed width for label text */
+    display: block; /* Set display to block for multiline */
+    white-space: nowrap; /* Prevent label text from wrapping */
+  }
+  
