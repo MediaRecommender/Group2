@@ -117,7 +117,7 @@ function displayGenreSongs(songTitles, songArtists) {
     .then(data => {
       console.log('Response:', data);
       // Handle the response here as needed
-      window.location.href = 'index.php';
+      window.location.href = 'musicRecommendation.php';
     })
     .catch(error => {
       console.error('Error:', error);

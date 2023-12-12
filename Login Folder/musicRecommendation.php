@@ -15,7 +15,6 @@
         header("Location: index.php");
 ?>
 
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -33,11 +32,10 @@
   <title>Pickify</title>
 </head>
 <body>
-  <h1>Fine Tune Palette</h1>
+  <h1>Created Playlist</h1>
 
   <form id="genreSongsContainer">
-  <script src="JavaScript/genreSongs.js"></script>
-  <button type="button" id="submitBtn">Submit</button>
+    <script src="JavaScript/generateRec.js"></script>
   </form>
   <div class="imgcontainer">
 			<img src="Media/OIG.svg" alt="Avatar" class="avatar">

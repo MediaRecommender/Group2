@@ -29,8 +29,10 @@
         <link rel="stylesheet" href = "Include/style.css">
         <link rel="stylesheet" href = "Include/quizStyle.css">
         <link rel="icon" type="image/x-icon" href="Media/OIG.svg">
+        <title>Pickify</title>
     </head>
     <body>
+    <h1>Select Preferred Genres</h1>
     <form id="genreForm">
         <div class="checkbox-group">
         <button type="button" id="submitBtn">Submit</button>

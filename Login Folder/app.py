@@ -4,7 +4,7 @@ import openai
 import recommender
 from flask_cors import CORS
 
-openai.api_key = "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" #paste in your own api key from this link https://platform.openai.com/api-keys
+openai.api_key = "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" #paste in your own api key from this link https://platform.openai.com/api-keys
 secretKey = '884fe27b952884ad8464bedef92a03bd' #paste your own deezer api key https://developers.deezer.com/myapps/
 baseURL = 'https://api.deezer.com/search' #deezer track search 
 
