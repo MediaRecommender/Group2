@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
   
     console.log('Data to be sent:', userUname); // Log the data before sending
     // Fetch genre songs data
-    fetch('http://localhost:5000/playlist', {
+    fetch('http://ec2-18-191-32-136.us-east-2.compute.amazonaws.com/playlist', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'

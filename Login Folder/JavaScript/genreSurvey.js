@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', function() {
   
     console.log('Data to be sent:', data); // Log the data before sending
   
-    const url = 'http://127.0.0.1:5000/genreSurvey/submit';
+    const url = 'http://ec2-18-191-32-136.us-east-2.compute.amazonaws.com/genreSurvey/submit';
   
     fetch(url, {
       method: 'POST',
